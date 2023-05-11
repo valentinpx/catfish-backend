@@ -16,10 +16,10 @@ services:
     restart: always
     environment:
       MYSQL_DATABASE: "reports"
-      MYSQL_USER: "${DB_USER}}"
-      MYSQL_PASSWORD: "${DB_PASS}"
-      MYSQL_ROOT_PASSWORD: "${DB_ROOT_PASS}"
+      MYSQL_ROOT_PASSWORD: "${DB_PASS}"
     ports:
       - 3306:3306
     volumes:
       - ./db:/var/lib/mysql
+
+  # TODO: Add a python service

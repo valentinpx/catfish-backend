@@ -1,6 +1,6 @@
 # Catfish Backend
 This project is a backend server for the Catfish project.
-It receives organizes and stores the data sent by the Catfish in MQTT to a database and provides a REST API to access it.
+It receives organizes and stores the data sent by the Catfish in MQTT to a MySQL database and provides a REST API to access it.
 
 # Usage
 ## Setup
