@@ -4,10 +4,11 @@ It receives organizes and stores the data sent by the Catfish in MQTT to a datab
 
 # Usage
 ## Setup
-
-## Build
+Install docker and docker-compose.
+Create a `.env` file in the root of the project based on the `.env.example` file.
 
 ## Run
+Run `docker-compose up` to start the server.
 
 # Development
 

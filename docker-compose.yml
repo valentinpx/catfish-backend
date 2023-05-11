@@ -2,10 +2,23 @@ version: "3"
 
 services:
   mosquitto:
-    container_name: mosquitto
+    container_name: mosquitto:2
     image: eclipse-mosquitto
     restart: unless-stopped
     volumes:
       - ./mosquitto/config:/mosquitto/config
     ports:
       - 1883:1883
+
+    db:
+      image: mysql:8
+      restart: always
+      environment:
+        MYSQL_DATABASE: "reports"
+        MYSQL_USER: "${DB_USER}}"
+        MYSQL_PASSWORD: "${DB_PASSWORD}"
+        MYSQL_ROOT_PASSWORD: "${DB_ROOT_PASSWORD}"
+      ports:
+        - 3306:3306
+      volumes:
+        - my-db:/var/lib/mysql
