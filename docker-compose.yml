@@ -13,7 +13,7 @@ services:
   db:
     container_name: db
     image: mysql:8
-    restart: always
+    restart: unless-stopped
     environment:
       MYSQL_DATABASE: "reports"
       MYSQL_ROOT_PASSWORD: "${DB_PASS}"
@@ -25,5 +25,9 @@ services:
   api:
     container_name: api
     build: "."
+    restart: unless-stopped
+    depends_on:
+      - db
+      - mosquitto
     ports:
       - 8000:8000
