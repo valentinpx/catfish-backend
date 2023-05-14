@@ -22,4 +22,8 @@ services:
     volumes:
       - ./db:/var/lib/mysql
 
-  # TODO: Add a python service
+  api:
+    container_name: api
+    build: "."
+    ports:
+      - 8000:8000

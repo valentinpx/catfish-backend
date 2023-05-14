@@ -2,3 +2,4 @@ paho-mqtt==1.6.1
 load-dotenv==0.1.0
 mysql-connector-python==8.0.33
 Flask==2.2.2
+gunicorn==20.1.0
