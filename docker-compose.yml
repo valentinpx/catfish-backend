@@ -12,15 +12,15 @@ services:
 
   db:
     container_name: db
-    image: mysql:8
+    image: couchdb
     restart: unless-stopped
-    environment:
-      MYSQL_DATABASE: "reports"
-      MYSQL_ROOT_PASSWORD: "${DB_PASS}"
     ports:
-      - 3306:3306
+      - 5984:5984
+    environment:
+      COUCHDB_USER: admin
+      COUCHDB_PASSWORD: ${DB_PASS}
     volumes:
-      - ./db:/var/lib/mysql
+      - ./db:/opt/couchdb/data
 
   api:
     container_name: api

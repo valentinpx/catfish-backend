@@ -17,8 +17,8 @@ The MQTT broker, database and python server run in docker containers that can be
 The MQTT broker configuration is stored in the `moquitto/config` folder.
 
 ## Database
-The server interracts with a MySQL database thanks to the [MySQL Connector](https://dev.mysql.com/doc/connector-python/en) library. The file `src/db.py` contains the DB class that handles the connection and queries.
-The tables are created the class constructor at the first run of the server.
+The server interracts with a CouchDB database thanks to the [couchdb python](https://couchdb-python.readthedocs.io/en/latest/) library. The file `src/db.py` contains the DB class that handles the connection and queries.
+The tables are created in the class constructor at the first run of the server.
 
 ## API
 The server exposes an API to access the data stored in the database thanks to the [Flask](https://flask.palletsprojects.com/en/2.3.x/) library.
@@ -37,26 +37,26 @@ Returns a list of all the reports in the database between the `start` and `end` 
   {
     "CDOM": 3.0,
     "PH": 26.0,
-    "client_id": "CATFISH_PROTOTYPE",
-    "date": "2023-04-27T04:20:00Z",
-    "depth": 7.0,
-    "dissolved_oxygen": 59.0,
-    "fish_depth": 8.0,
-    "induction": 535.0,
-    "nitrate": 141.0,
-    "pressure": 9.0
+    "CLIENT_ID": "CATFISH_PROTOTYPE",
+    "TIME": "2023-04-27T04:20:00Z",
+    "DEPTH": 7.0,
+    "DISSOLVED_OXYGEN": 59.0,
+    "FISH_DEPTH": 8.0,
+    "INDUCTION": 535.0,
+    "NITRATE": 141.0,
+    "PRESSURE": 9.0
   },
   {
     "CDOM": 3.0,
     "PH": 26.0,
-    "client_id": "CATFISH_PROTOTYPE",
-    "date": "2023-04-27T04:20:00Z",
-    "depth": 7.0,
-    "dissolved_oxygen": 59.0,
-    "fish_depth": 8.0,
-    "induction": 535.0,
-    "nitrate": 141.0,
-    "pressure": 9.0
+    "CLIENT_ID": "CATFISH_PROTOTYPE",
+    "TIME": "2023-04-27T04:20:00Z",
+    "DEPTH": 7.0,
+    "DISSOLVED_OXYGEN": 59.0,
+    "FISH_DEPTH": 8.0,
+    "INDUCTION": 535.0,
+    "NITRATE": 141.0,
+    "PRESSURE": 9.0
   },
 ]
 ```
