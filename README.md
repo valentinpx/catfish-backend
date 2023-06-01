@@ -64,6 +64,6 @@ Returns a list of all the reports in the database between the `start` and `end` 
 # License
 This work is licensed under a [CreativeCreative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0/).
 
-Made with 💖 by Valentin Sene.
+Made with 💖 by [Valentin Sene](mailto:pro@valentinsene.me).
 
 ![Creative Commons License](https://i.creativecommons.org/l/by-nc/4.0/88x31.png "Creative Commons License")

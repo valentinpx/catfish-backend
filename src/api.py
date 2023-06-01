@@ -9,6 +9,6 @@ def hello_world():
 @app.route("/reports", methods=['GET'])
 def get_reports():
     db = app.config['DB']
-    reports = db.get_reports(request.json["ids"], request.json["start"], request.json["end"])
+    reports = db.get_reports(request.args["ids"], request.args["start"], request.args["end"])
 
     return reports
